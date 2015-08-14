@@ -163,7 +163,7 @@ namespace Voat.Controllers
 
             if (!Business.Utilities.AccountSecurity.IsPasswordComplex(model.Password, model.UserName))
             {
-                ModelState.AddModelError(string.Empty, "Your password is not secure. You must use at least one uppercase letter, one lowercase letter, one number and one special character such as ?, ! or .");
+                ModelState.AddModelError(string.Empty, "Your password is not secure. You must use at least one uppercase letter, one lowercase letter, one number, one special character such as ?, ! or . and it must not be the same as your username.");
                 return View(model);
             }
 
